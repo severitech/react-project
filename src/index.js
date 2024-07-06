@@ -6,19 +6,35 @@ import ReactDom from "react-dom/client";
 //importar componente
 import { Greeting, UserCard } from "./greeting";
 
-import Producto,{NavBar} from "./Product";
+import Producto, { NavBar } from "./Product";
 //Usar el dom para añadir un elemento al componente div con el id root
 const root = ReactDom.createRoot(document.getElementById("root"));
 //enviamos a esa constantes elementos html
 
 root.render(
   <>
-    <Greeting title = "Hola Mundo" name ="Hola React"/>
+    {/* <Greeting title = "Hola Mundo" name ="Hola React"/>
     <Greeting title = "Componente 2"/>
-    <Greeting title = "Este es otro componente"/>
+    <Greeting title = "Este es otro componente"/> */}
 
-    {/* <UserCard/>
-    <Producto />
+    <UserCard
+      name="Douglas Tech"
+      amount={3000}
+      married={false}
+      points={[99, 33.3, 22.2]}
+      address={{ street: "123 main street", city: "New York" }}
+      //Puedo Pasar una funcion
+      greet = {function() {alert('Hello') }}
+    />
+
+<UserCard
+      name="Severitech Dev"
+      amount={1000}
+      married={true}
+      points={[99, 22.2]}
+      address={{ street: "Vallegrande", city: "Santa cruz" }}
+    />
+    {/* <Producto />
     <NavBar/> */}
   </>
 );

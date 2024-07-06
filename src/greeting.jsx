@@ -1,13 +1,26 @@
 //este es un componente
-export function Greeting({title, name= "User"}) {
+export function Greeting({ title, name = "User" }) {
   console.log(title, name);
   return (
     <>
-      <h1>{title}, dice {name}</h1>
+      <h1>
+        {title}, dice {name}
+      </h1>
     </>
   );
 }
 
-export function UserCard() {
-  return <h1>User Card</h1>;
+export function UserCard( {name,amount,married,address, greet}){
+  console.log(name,amount,married,address,greet);
+  return (
+    <div>
+      <h1>{name}</h1>
+      <p>💵 {amount}</p>
+      <p>{married ? "Esta casado" : "Esta soltero"}</p>
+      <ul>
+        <li>City: {address.city}</li>
+        <li>Street: {address.street}</li>
+      </ul>
+    </div>
+  );
 }
