@@ -4,10 +4,15 @@ import React from "react";
 import ReactDom from "react-dom/client";
 
 //importar componente
-import { Greeting, UserCard } from "./greeting";
+// import { Greeting, UserCard } from "./greeting";
 
-import Producto, { NavBar } from "./Product";
+// import Producto, { NavBar } from "./Product";
+
+import { Button } from "./Button";
 //Usar el dom para añadir un elemento al componente div con el id root
+
+import { TaskCard } from "./Task";
+
 const root = ReactDom.createRoot(document.getElementById("root"));
 //enviamos a esa constantes elementos html
 
@@ -17,7 +22,7 @@ root.render(
     <Greeting title = "Componente 2"/>
     <Greeting title = "Este es otro componente"/> */}
 
-    <UserCard
+    {/*    <UserCard
       name="Douglas Tech"
       amount={3000}
       married={false}
@@ -33,8 +38,14 @@ root.render(
       married={true}
       points={[99, 22.2]}
       address={{ street: "Vallegrande", city: "Santa cruz" }}
-    />
+    /> */}
     {/* <Producto />
     <NavBar/> */}
+
+    {/* <Button text="Click Me" name="Douglas" />
+    <Button text="Pay" />
+    <Button text="" /> */}
+
+    <TaskCard/>
   </>
 );
