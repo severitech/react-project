@@ -13,8 +13,13 @@ import { Button } from "./Button";
 
 import { TaskCard } from "./Task";
 
+import { Saludar } from "./Saludar";
 const root = ReactDom.createRoot(document.getElementById("root"));
 //enviamos a esa constantes elementos html
+
+const handleChange = (e) =>{
+  console.log(e.target.value)
+}
 
 root.render(
   <>
@@ -41,11 +46,21 @@ root.render(
     /> */}
     {/* <Producto />
     <NavBar/> */}
-
-    {/* <Button text="Click Me" name="Douglas" />
+    <TaskCard />
+    <Saludar />
+    <Button text="Click Me" name="Douglas" />
     <Button text="Pay" />
-    <Button text="" /> */}
+    <Button text="" />
+    
+    <input id = "hola" onChange={handleChange}></input>
 
-    <TaskCard/>
+    <form onSubmit={(e)=> {
+      //no recargar la pagina al enviar el formulario al backend
+      e.preventDefault()
+      console.log('Enviando datos del formulario')
+    }}>
+      <h1>Registro de usuario</h1>
+      <button>Send</button>
+    </form>
   </>
 );

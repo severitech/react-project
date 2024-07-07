@@ -1,5 +1,5 @@
 import './task.css';
-//lo recomendable es usar constantes para tener en cuenta cambiar los estilos
+//podemos usar componentes con estilos ya sea declarado como constante o importarlo en un archivo css
 export function TaskCard() {
 
     return <div className = "card">
