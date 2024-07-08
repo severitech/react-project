@@ -14,12 +14,35 @@ import { Button } from "./Button";
 import { TaskCard } from "./Task";
 
 import { Saludar } from "./Saludar";
+
+import { Posts } from "./Posts";
+import {Prueba} from './PruebaHooks'
 const root = ReactDom.createRoot(document.getElementById("root"));
 //enviamos a esa constantes elementos html
 
-const handleChange = (e) =>{
-  console.log(e.target.value)
-}
+const handleChange = (e) => {
+  console.log(e.target.value);
+};
+
+//arreglo de usuarios
+const users = [
+  {
+    id: 1,
+    name: "Douglas",
+    image: "https://robohash.org/usuario1",
+  },
+  {
+    id: 2,
+    name: "Severitech",
+    image: "https://robohash.org/usuario2",
+  },
+  {
+    id: 3,
+    name: "Marcos",
+    image: "https://robohash.org/usuario3",
+  }
+];
+
 
 root.render(
   <>
@@ -46,7 +69,7 @@ root.render(
     /> */}
     {/* <Producto />
     <NavBar/> */}
-    <TaskCard />
+    {/* <TaskCard />
     <Saludar />
     <Button text="Click Me" name="Douglas" />
     <Button text="Pay" />
@@ -60,7 +83,20 @@ root.render(
       console.log('Enviando datos del formulario')
     }}>
       <h1>Registro de usuario</h1>
-      <button>Send</button>
-    </form>
+      <Button text = "Valor">Send</Button>
+    </form> */}
+
+    {/* <Posts /> 
+    Recorrer arreglos
+    */}
+    {/* {users.map((user, index) => {
+      return (
+        <div key={index}>
+          <h1>{user.name}</h1>
+          <img src= {user.image} />
+        </div>
+      );
+    })} */}
+    <Prueba/>
   </>
 );
